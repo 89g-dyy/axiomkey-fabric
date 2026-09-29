@@ -1,0 +1,43 @@
+name: Hardware or firmware bug
+description: Report a reproducible problem with a board, interface, or firmware revision.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Baseboard hardware
+        - MKEY module
+        - BKEY module
+        - Firmware
+        - Documentation or pin map
+        - Tooling
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision or commit
+      placeholder: Board revision, firmware version, or commit hash
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Include power conditions, connected modules, and repeatable steps.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Measurements or evidence
+      description: Add logs, scope captures, photos, or relevant net and pin names.

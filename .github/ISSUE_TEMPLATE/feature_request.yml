@@ -1,0 +1,37 @@
+name: Feature or module proposal
+description: Propose a new module, interface capability, or project improvement.
+title: "[Proposal] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Describe the use case and the problem being solved.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Target area
+      options:
+        - Baseboard
+        - MKEY module
+        - BKEY module
+        - Firmware
+        - Documentation
+        - Tooling
+    validations:
+      required: true
+  - type: textarea
+    id: interface
+    attributes:
+      label: Interface impact
+      description: State affected pins, power domains, protocols, compatibility, and required PHYs.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Proposed verification
+      description: Describe electrical, firmware, manufacturing, and bench tests.
